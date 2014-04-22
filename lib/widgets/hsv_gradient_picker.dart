@@ -58,7 +58,7 @@ class HsvGradientPicker implements HueChangeListener {
   HsvGradientPicker(int width, int height, [this._color]) {
     canvas = new CanvasElement(width: width, height: height);
     canvas.classes.add("color-picker-hsv-gradient");
-    context = canvas.context2D;
+    context = canvas.getContext("2d");
     if (_color == null) {
       _color = new ColorValue();
     }
